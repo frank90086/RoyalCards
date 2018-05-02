@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "material-ui": "^0.18.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-tap-event-plugin": "^2.0.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "material-ui": "^0.18.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "scripts": {
+    "dev": "webpack --config ./webpack/webpack.config.dev.js",
+    "dev-watch": "webpack-dev-server --port 5000 --hot --config ./webpack/webpack.config.dev.js",
+    "dotnet-watch": "dotnet watch run",
+    "start": "concurrently \"npm run dev-watch\" \"npm run dotnet-watch\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
